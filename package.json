@@ -1,0 +1,47 @@
+{
+  "name": "microblog",
+  "version": "1.0.0",
+  "description": "a microblogging engine with Node.js / Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build --public-url /static client/index.html",
+    "build:dev": "parcel watch --public-url /static client/index.html",
+    "start": "NODE_ENV=production node -r esm server",
+    "start:dev": "NODE_ENV=development nodemon -w server -r esm server",
+    "seed": "node -r esm server/seeds",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "bcrypt": "^3.0.3",
+    "color-hash": "^1.0.3",
+    "esm": "^3.1.1",
+    "faker": "^4.1.0",
+    "fastify": "^2.0.0-rc.4",
+    "fastify-cors": "^2.0.1",
+    "fastify-jwt": "^0.9.1",
+    "fastify-mongodb": "^1.0.0",
+    "fastify-static": "^2.1.0",
+    "jdenticon": "^2.1.1",
+    "mongodb": "^3.1.12",
+    "sha.js": "^2.4.11",
+    "v-click-outside-x": "^3.7.1",
+    "vue": "^2.5.22",
+    "vue-hot-reload-api": "^2.3.1",
+    "vue-material-design-icons": "^2.6.0",
+    "vue-moment": "^4.0.0",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^2.5.0",
+    "cssnano": "^4.1.8",
+    "nodemon": "^1.18.9",
+    "parcel": "^1.11.0",
+    "pug": "^2.0.3",
+    "stylus": "^0.54.5",
+    "vue-template-compiler": "^2.5.22"
+  }
+}

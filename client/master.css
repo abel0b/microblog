@@ -1,0 +1,305 @@
+body {
+    background: #f5f5f5;
+    margin: 0;
+    font-family: "Cantarell", sans-serif;
+}
+
+.container {
+    background: #fff;
+    width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    padding: 15px;
+}
+
+h1.title {
+    padding: 15px;
+    border-bottom: 1px dotted #f5f5f5;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form .field label {
+    margin-bottom: 10px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    font-weight: normal;
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+#mainHeaderWrapper {
+    background: #454950;
+}
+
+#mainHeader h1 {
+    margin: 0;
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+#mainHeader h1 > a {
+    text-decoration: none;
+    color: #444;
+}
+
+#mainHeader {
+    background: #fbfbfb;
+    height: 60px;
+    display: flex;
+}
+
+#mainHeader .button {
+    align-self: center;
+    margin-right: 15px;
+}
+
+.button {
+    border-radius: 5px;
+    background: #008CBA;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    border: 0;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.green.button {
+    background: #4CAF50;
+}
+
+.red.button {
+    background: #f44336;
+}
+
+.posts {
+}
+
+
+input, textarea {
+    background: white;
+}
+
+label {
+}
+
+input {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    border: 1px solid #cecece;
+    padding: 0 5px;
+    color: #444;
+}
+
+input:focus {
+    border-color: #55f;
+}
+
+form.post {
+    margin: 0;
+    background: #fff;
+    display: block;
+}
+
+form.post textarea {
+    border-radius: 3px;
+    border: 1px solid #cecece;
+    height: 60px;
+    padding: 5px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    background: white;
+}
+
+form.post .form-actions {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.form-actions {
+    padding-top: 10px;
+}
+
+form.post button {
+    border-radius: 14px;
+    border: 0;
+    padding: 0;
+    height: 27px;
+    line-height: 27px;
+    background: #55f;
+    color: #fff;
+    padding: 0 15px;
+}
+
+.post-meta .display-username {
+    font-weight: bold;
+    color: #55f;
+}
+
+.post-meta .username {
+    color: #666;
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.fg1 {
+    flex-grow: 1;
+}
+
+.post-meta {
+    display: flex;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+#mainFooter {
+    background: #cfcfcf;
+    font-style: italic;
+}
+
+#mainFooter p {
+    margin: 0;
+    color: #333;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+}
+
+.users {
+    padding: 0 15px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.users .user {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #444;
+}
+
+.users .user:nth-child(odd) {
+    background: #f5f5f5;
+}
+
+.users .user:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.users .user:hover {
+    background: #fcfcfc;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    width: 180px;
+}
+
+nav.panel {
+    display: flex;
+    flex-direction: column;
+}
+
+nav.panel a {
+    border-bottom: 1px solid #ddd;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: #444;
+}
+
+nav.panel a:hover {
+    background: #fbfbfb;
+}
+
+a {
+    color: #55f;
+    text-decoration: none;
+}
+
+.at {
+    color: #55f;
+}
+
+.button-group {
+    display: flex;
+    padding: 15px;
+}
+
+.pagination {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    border: 1px solid #ddd;
+    border-right: 0;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    background: #fbfbfb;
+}
+
+.pagination a:last-child {
+    border-right: 1px solid #ddd;
+    border-radius: 0 2px 2px 0;
+}
+
+.pagination a:first-child {
+    border-radius: 2px 0 0 2px;
+}
+
+.pagination a.disabled {
+    color: #a9a9a9;
+}
+
+.pagination a:hover {
+    background: #fcfcfc;
+}
+
+.pagination a.disabled {
+    background: #fbfbfb;
+}
+
+.error {
+    color: #f44336;
+    margin: 5px 0;
+}
+
+.more {
+    display: block;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+.more:hover {
+    background: #f5f5f5;
+    cursor: pointer;
+}

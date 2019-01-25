@@ -1,0 +1,29 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: docker
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_JOB_TOKEN | docker login --username gitlab-ci-token --password-stdin $CI_REGISTRY
+  script:
+    - docker pull registry.gitlab.com/abeliam/microblog
+    - docker build -t registry.gitlab.com/abeliam/ablab/ablab .
+    - docker push registry.gitlab.com/abeliam/microblog
+
+deploy:
+  stage: deploy
+  image: alpine
+  before_script:
+    - apk add --no-cache openssh
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $HOST >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - cat docker-compose.yml | ssh $DEPLOYER@$HOST docker pull registry.gitlab.com/abeliam/microblog && docker-compose -f - up -d
