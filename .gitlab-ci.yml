@@ -10,8 +10,7 @@ build:
   before_script:
     - echo $CI_JOB_TOKEN | docker login --username gitlab-ci-token --password-stdin $CI_REGISTRY
   script:
-    - docker pull registry.gitlab.com/abeliam/microblog
-    - docker build -t registry.gitlab.com/abeliam/ablab/ablab .
+    - docker build -t registry.gitlab.com/abeliam/microblog .
     - docker push registry.gitlab.com/abeliam/microblog
 
 deploy:
