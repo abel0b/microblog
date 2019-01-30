@@ -1,4 +1,4 @@
-import PostItemList from "../components/PostItemList"
+import HomePage from "../components/HomePage"
 import SigninPage from "../components/SigninPage"
 import SignupPage from "../components/SignupPage"
 import UserProfile from "../components/UserProfile"
@@ -8,7 +8,7 @@ const routes = [
     {
         path: "/",
         name: "home",
-        component: PostItemList
+        component: HomePage
     },
     {
         path: "/sign-in",

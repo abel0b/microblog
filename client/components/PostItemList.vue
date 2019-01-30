@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <div class="post-item-list">
         <post-item-new
             v-on:new-post="onNewPost"
         ></post-item-new>
@@ -42,7 +42,7 @@
         >
             <i class="fas fa-plus"></i> Load more
         </a>
-    </section>
+    </div>
 </template>
 
 <script>
