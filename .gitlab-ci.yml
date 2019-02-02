@@ -10,6 +10,7 @@ build:
   before_script:
     - echo $CI_JOB_TOKEN | docker login --username gitlab-ci-token --password-stdin $CI_REGISTRY
   script:
+    - docker pull registry.gitlab.com/abeliam/microblog
     - docker build -t registry.gitlab.com/abeliam/microblog .
     - docker push registry.gitlab.com/abeliam/microblog
 
@@ -20,7 +21,7 @@ deploy:
     - apk add --no-cache openssh
     - mkdir ~/.ssh
     - ssh-keyscan $HOST > ~/.ssh/known_hosts
-    - echo $SSH_PRIVATE_KEY > server.pem
+    - echo "$SSH_PRIVATE_KEY" > server.pem
     - chmod 400 server.pem
   script:
     - cat docker-compose.yml | ssh -i server.pem $DEPLOYER@$HOST "docker pull registry.gitlab.com/abeliam/microblog && docker-compose -f - up -d"
