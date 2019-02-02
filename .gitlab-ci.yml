@@ -24,4 +24,4 @@ deploy:
     - echo "$SSH_PRIVATE_KEY" > server.pem
     - chmod 400 server.pem
   script:
-    - cat docker-compose.yml | ssh -i server.pem $DEPLOYER@$HOST "docker pull registry.gitlab.com/abeliam/microblog && docker-compose -f - up -d"
+    - cat docker-compose.yml | ssh -i server.pem $DEPLOYER@$HOST "docker pull registry.gitlab.com/abeliam/microblog && COMPOSE_PROJECT_NAME=microblog docker-compose -f - up -d"
