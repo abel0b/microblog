@@ -15,7 +15,7 @@ async function boot() {
         logger: true
     })
     app.register(cors, {
-        origin: "http://localhost:8181"
+        origin: (process.env.NODE_ENV === "production")? "http://microblog.adnt.fr" : "http://localhost:8080"
     })
     app.register(fastifyMongo, {
         forceClose: true,
@@ -48,7 +48,7 @@ async function boot() {
         const stream = fs.createReadStream(pth)
         reply.type("text/html").send(stream)
     })
-    await app.listen(8080)
+    await app.listen(8080, "0.0.0.0")
 }
 
 boot()
