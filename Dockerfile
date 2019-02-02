@@ -3,9 +3,8 @@ ENV NODE_ENV development
 WORKDIR /usr/src/app
 RUN apk add --no-cache curl python make g++ util-linux
 RUN curl -L https://unpkg.com/@pnpm/self-installer | node
-RUN mkdir client server
 COPY package.json .
-RUN pnpm install
+RUN pnpm install --shamefully-flatten
 COPY . .
 RUN pnpm run build
 CMD pnpm start

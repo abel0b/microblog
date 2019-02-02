@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
+    "@babel/runtime": "^7.3.1",
     "bcrypt": "^3.0.3",
     "color-hash": "^1.0.3",
     "core-js": "^2.6.3",
@@ -38,6 +38,8 @@
     "vuex": "^3.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "@vue/component-compiler-utils": "^2.5.0",
     "cssnano": "^4.1.8",
     "nodemon": "^1.18.9",

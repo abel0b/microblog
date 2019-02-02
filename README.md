@@ -4,11 +4,11 @@
 A microblogging engine with Node.js / Vue.js
 
 ## demo
-Demo at (http://microblog.adnt.fr)[http://microblog.adnt.fr]
+Demo at [http://microblog.adnt.fr](http://microblog.adnt.fr)
 
 ## deploy
 ### deploy with docker-compose
 ```
 curl https://gitlab.com/abeliam/microblog/raw/master/docker-compose.yml | docker-compose -f -
 ```
-The app is running at (http://localhost:8080)[http://localhost:8080]
+The app is running at [http://localhost:8080](http://localhost:8080)
