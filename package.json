@@ -4,8 +4,8 @@
   "description": "a microblogging engine with Node.js / Vue.js",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build --public-url /static client/index.html",
-    "build:dev": "parcel watch --public-url /static client/index.html",
+    "build": "NODE_ENV=production parcel build --public-url /static client/index.html",
+    "build:dev": "NODE_ENV=development parcel watch --public-url /static client/index.html",
     "start": "NODE_ENV=production node -r esm server",
     "start:dev": "NODE_ENV=development nodemon -w server -r esm server",
     "seed": "node -r esm server/seeds",

@@ -4,7 +4,7 @@ div#app
         header#mainHeader.container
             h1
                 router-link(v-bind:to="{name: 'home'}")
-                    hand-icon
+                    hand-icon.microblog-logo
                     |microblog
             div.fg1
             router-link.green.button(v-bind:to="{ name: 'sign-up' }" v-if="!logged") Sign Up
@@ -96,4 +96,7 @@ nav.panel a .material-design-icon__svg
     height 1em
     width 1em
     margin-right .5em
+.microblog-logo
+    width 40px
+    display flex
 </style>
