@@ -21,14 +21,14 @@ const routes = [
         component: SignupPage
     },
     {
-        path: "/(@)?:username",
-        name: "user",
-        component: UserProfile
-    },
-    {
         path: "/settings",
         name: "settings",
         component: UserSettings
+    },
+    {
+        path: "/(@)?:username",
+        name: "user",
+        component: UserProfile
     }
 ]
 

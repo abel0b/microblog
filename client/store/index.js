@@ -12,6 +12,7 @@ const store = new Vuex.Store({
                 _id: "",
                 username: "undefined",
                 name: "Undefined",
+                bio: "Undefined"
             }
         },
     },

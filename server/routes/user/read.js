@@ -17,6 +17,9 @@ const route = {
                     username: {
                         type: 'string'
                     },
+                    bio: {
+                        type: 'string'
+                    },
                     name: {
                         type: 'string'
                     }
@@ -30,6 +33,7 @@ const route = {
         return {
             _id: user._id,
             username: user.username,
+            bio: user.bio,
             name: user.name,
         }
     }

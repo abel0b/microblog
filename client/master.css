@@ -85,27 +85,28 @@ h1, h2, h3, h4, h5, h6 {
     background: #f44336;
 }
 
-.posts {
-}
-
 
 input, textarea {
     background: white;
-}
-
-label {
-}
-
-input {
-    height: 30px;
+    border: 1px solid #cecece;
     line-height: 30px;
     font-size: 16px;
-    border: 1px solid #cecece;
-    padding: 0 5px;
+    font-family: Cantarell, sans-serif;
     color: #444;
 }
 
-input:focus {
+textarea {
+    padding: 5px;
+    line-height: 1.2em;
+}
+
+input {
+    padding: 0 5px;
+    height: 30px;
+
+}
+
+textarea:focus, input:focus {
     border-color: #55f;
 }
 

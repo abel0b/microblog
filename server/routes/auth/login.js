@@ -35,7 +35,13 @@ const route = {
                             username: {
                                 type: 'string'
                             },
+                            bio: {
+                                type: 'string'
+                            },
                             name: {
+                                type: 'string'
+                            },
+                            email: {
                                 type: 'string'
                             }
                         }
@@ -65,6 +71,8 @@ const route = {
                 _id: user._id,
                 username: user.username,
                 name: user.name,
+                bio: user.bio,
+                email: user.email,
             }
         }
     }

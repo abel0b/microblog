@@ -1,6 +1,6 @@
 
 <template lang="html">
-<div class="container">
+    <div class="container">
         <h1 class="title">Sign Up</h1>
 
         <form v-on:submit.prevent="signup">

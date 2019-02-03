@@ -15,6 +15,7 @@ async function seed(db) {
     inserted.push(users.insertOne({
         username: 'admin',
         name: faker.name.firstName(),
+        bio: faker.lorem.sentence(faker.random.number({min:10,max:35})),
         email: 'admin@admin.admin',
         created_at: new Date(),
         role: 'admin',
@@ -25,6 +26,7 @@ async function seed(db) {
         inserted.push(users.insertOne({
             username: faker.internet.userName(),
             name: faker.name.firstName(),
+            bio: faker.lorem.sentence(faker.random.number({min:10,max:35})),
             email: faker.internet.email(),
             created_at: new Date(),
             role: 'user',

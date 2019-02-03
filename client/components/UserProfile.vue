@@ -3,8 +3,10 @@
     .cover
         .cover-image(v-html="identicon")
         .cover-text
-            h1 {{user.name}}
-            span.username @{{user.username}}
+            h1
+                |{{user.name}}
+                span.username @{{user.username}}
+            p {{user.bio}}
     post-item-list(
         v-if="!user.processing"
         v-bind:author="user._id"
@@ -24,6 +26,7 @@ export default {
                 _id: "",
                 name: "",
                 username: "",
+                bio: "",
                 processing: true
             }
         }
@@ -47,6 +50,7 @@ export default {
                 this.user._id = data._id
                 this.user.name = data.name
                 this.user.username = data.username
+                this.user.bio = data.bio
                 this.user.processing = false
             }
         }
@@ -61,7 +65,7 @@ export default {
 .cover
     padding 15px
     display flex
-    align-items center
+    align-items flex-start
 .cover .cover-image
     margin-right 15px
     background #dedede
@@ -71,11 +75,14 @@ export default {
     flex-direction column
 .cover .cover-text h1
     margin 0
-    font-size 28px
-    line-height 45px
+    font-size 20px
+    line-height 30px
 .cover .username
-
     color #777
-    font-size 16px
-    line-height 25px
+    font-size 0.8em
+    margin-left 5px
+.cover .cover-text p
+    margin 0
+    color #464646
+    font-style italic
 </style>
