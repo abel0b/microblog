@@ -1,4 +1,4 @@
-const apiRoot = 'http://localhost:8080'
+const apiRoot = (process.env.NODE_ENV = 'production')? 'http://microblog.adnt.fr' : 'http://localhost:8080'
 
 const api = {
     get(path) {
