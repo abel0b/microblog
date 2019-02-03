@@ -14,6 +14,10 @@ const route = {
             author: {
                 type: 'string',
                 default: null
+            },
+            reverse: {
+                type: 'boolean',
+                default: false
             }
         },
         response: {
@@ -81,12 +85,14 @@ const route = {
             query.parent = this.mongo.ObjectId(request.query.parent)
 
         const cursor = await posts
-            .find(query, {projection})
-            .sort({
-                created_at: -1
+            .find(query, {
+                projection,
+                sort: {
+                    created_at: (request.query.reverse)? 1 : -1
+                },
+                limit: 10,
+                skip: (request.query.page - 1) * 10
             })
-            .limit(10)
-            .skip((request.query.page - 1) * 10)
 
         const posts_data = await cursor.toArray()
 
