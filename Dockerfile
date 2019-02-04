@@ -7,6 +7,5 @@ COPY package.json .
 RUN pnpm install --shamefully-flatten
 COPY . .
 RUN pnpm run build
-RUN NODE_ENV=production pnpm run seed
-CMD pnpm start
+CMD NODE_ENV=production pnpm run seed && pnpm start
 EXPOSE 8080
