@@ -32,7 +32,7 @@ div#app
         nav.panel
         .fg1
     footer#mainFooter.container
-        p microblog 2018
+        p microblog - contact
 </template>
 
 <script>
