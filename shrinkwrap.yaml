@@ -14,6 +14,8 @@ dependencies:
   mongodb: 3.1.13
   regenerator-runtime: 0.13.1
   sha.js: 2.4.11
+  typeface-cantarell: 0.0.54
+  typeface-staatliches: 0.0.71
   v-click-outside-x: 3.7.1
   vue: 2.5.22
   vue-hot-reload-api: 2.3.1
@@ -6094,6 +6096,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+  /typeface-cantarell/0.0.54:
+    dev: false
+    resolution:
+      integrity: sha512-sTVNWDAlUjQVvjMpKNhzMgIpDmSb3oBRFPd3BezWImPROoHZMuXuq5cA2o0plcVyBlo+5Dhg91RblcbVYdNJ5g==
+  /typeface-staatliches/0.0.71:
+    dev: false
+    resolution:
+      integrity: sha512-nWQblJNWDCIT1Dwu4ZT27jZsN1rgeUgFrEl1SH2sM5xbYE6fcdbHVMdDk2Rpz4AdA0fgwFb2g8oevbxO3KrHtA==
   /uglify-js/2.8.29:
     dependencies:
       source-map: 0.5.7
@@ -6508,6 +6518,8 @@ specifiers:
   regenerator-runtime: ^0.13.1
   sha.js: ^2.4.11
   stylus: ^0.54.5
+  typeface-cantarell: ^0.0.54
+  typeface-staatliches: ^0.0.71
   v-click-outside-x: ^3.7.1
   vue: ^2.5.22
   vue-hot-reload-api: ^2.3.1

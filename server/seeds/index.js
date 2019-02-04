@@ -3,7 +3,7 @@ import posts from "./posts"
 import {MongoClient} from "mongodb"
 
 async function seed() {
-    const client = new MongoClient("mongodb://localhost:27017", { useNewUrlParser: true })
+    const client = new MongoClient((process.env.NODE_ENV === "production") ? "mongodb://database:27017/microblog" : "mongodb://localhost:27017/microblog", { useNewUrlParser: true })
     await client.connect()
     const db = client.db("microblog")
 

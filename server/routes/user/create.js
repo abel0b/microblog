@@ -26,7 +26,7 @@ const route = {
             }
         }
     },
-    preHandler: auth,
+    //preHandler: auth,
     async handler(request, reply) {
         const users = this.mongo.db.collection('users')
         const user = await users.insertOne({

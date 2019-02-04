@@ -20,22 +20,19 @@ div#app
                     span.name {{userdata.name}}
                     span.username @{{userdata.username}}
             router-link(v-bind:to="{ name: 'user', params: {username: userdata.username}}" v-if="logged")
-                span
-                    account-icon
+                account-icon
                 |My profile
             router-link(v-bind:to="{ name: 'settings' }" v-if="logged")
-                span
-                    tune-icon
+                tune-icon
                 |Settings
             a(v-on:click="$store.dispatch('logout')" v-if="logged")
-                span
-                    logout-icon
+                logout-icon
                 |Log out
         router-view
         nav.panel
         .fg1
     footer#mainFooter.container
-        p je suis un footer
+        p microblog 2018
 </template>
 
 <script>
@@ -92,11 +89,15 @@ export default {
 nav.panel a
     display flex
     align-items center
-nav.panel a .material-design-icon__svg 
+nav.panel a:hover
+    cursor pointer
+nav.panel a .material-design-icon
     height 1em
     width 1em
-    margin-right .5em
+    margin-right .3em
 .microblog-logo
-    width 40px
     display flex
+    height 25px
+    margin-right 5px
+    color #55f
 </style>
